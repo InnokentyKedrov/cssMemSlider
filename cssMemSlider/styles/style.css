@@ -1,5 +1,5 @@
 body {
-  background-image: url(../assets/mems/background.png);
+  background-image: url(../assets/mems/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -73,21 +73,30 @@ body {
 
 .button {
   box-sizing: border-box;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.point {
+  display: block;
+  margin: 0.75rem auto;
+  box-sizing: border-box;
   height: 1.5rem;
   width: 1.5rem;
-  margin: 0.8rem;
   cursor: pointer;
   border: 0.05em solid rgb(51, 98, 140);
   border-radius: 50%;
   transition: all .6s ease;
 }
 
-.button:hover {
+.button:hover .point {
   transform: scale(1.2);
   box-shadow: 0 0 1rem rgb(51, 98, 140);
 }
 
-.button:active {
+.button:active .point_1 {
   background-color: rgb(51, 98, 140);
 }
 
@@ -99,7 +108,7 @@ body {
   margin-left: 0;
 }
 
-#point1:checked ~ .wrapper .controls .button_1 {
+#point1:checked ~ .wrapper .controls .button_1 .point_1 {
   background-color: rgb(51, 98, 140);
 }
 
@@ -111,7 +120,7 @@ body {
   margin-left: -25%;
 }
 
-#point2:checked ~ .wrapper .controls .button_2 {
+#point2:checked ~ .wrapper .controls .button_2 .point_2 {
   background-color: rgb(51, 98, 140);
 }
 
@@ -123,7 +132,7 @@ body {
   margin-left: -50%;
 }
 
-#point3:checked ~ .wrapper .controls .button_3 {
+#point3:checked ~ .wrapper .controls .button_3 .point_3 {
   background-color: rgb(51, 98, 140);
 }
 
@@ -135,11 +144,11 @@ body {
   margin-left: -75%;
 }
 
-#point4:checked ~ .wrapper .controls .button_4 {
+#point4:checked ~ .wrapper .controls .button_4 .point_4 {
   background-color: rgb(51, 98, 140);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .main {
     width: 90%;
   }
@@ -149,7 +158,15 @@ body {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 819px) {
+  .header {
+    margin: 1rem auto;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
   .slider__image {
     padding: 2rem;
   }
@@ -173,9 +190,15 @@ body {
   }
 
   .button {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.3rem;
+  }
+
+  .point {
+    margin: 0.5rem auto;
+    box-sizing: border-box;
     height: 1rem;
     width: 1rem;
-    margin: 0.5rem;
   }
-  
 }
