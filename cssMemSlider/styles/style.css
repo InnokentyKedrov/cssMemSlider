@@ -1,0 +1,137 @@
+body {
+  background-color: lightgray;
+}
+
+.header {
+  margin: 40px auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+  max-width: 1280px;
+	margin: 0 auto;
+  overflow-x: hidden;
+  background-color: darkgray;
+  border-radius: 20px;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.slider__image {
+  width: 25%;
+  padding: 40px;
+  transition: all .6s ease;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.descriptions {
+  max-width: 25%;
+  overflow-x: hidden;
+}
+
+.descriptions__wrapper {
+  display: flex;
+  width: 400%;
+}
+
+.description {
+  width: 25%;
+  padding-left: 60px;
+  transition: all 1.6s ease;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.controls {
+  display: flex;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.button {
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: 2px solid rgb(51, 98, 140);
+  border-radius: 50%;
+  transition: all .6s ease;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgb(51, 98, 140);
+}
+
+.button:active {
+  background-color: rgb(51, 98, 140);
+}
+
+#point1:checked ~ .slider .slider__image-current {
+  margin-left: 0;
+}
+
+#point1:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: 0;
+}
+
+#point1:checked ~ .wrapper .controls .button_1 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point2:checked ~ .slider .slider__image-current {
+  margin-left: -25%;
+}
+
+#point2:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -25%;
+}
+
+#point2:checked ~ .wrapper .controls .button_2 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point3:checked ~ .slider .slider__image-current {
+  margin-left: -50%;
+}
+
+#point3:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -50%;
+}
+
+#point3:checked ~ .wrapper .controls .button_3 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point4:checked ~ .slider .slider__image-current {
+  margin-left: -75%;
+}
+
+#point4:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -75%;
+}
+
+#point4:checked ~ .wrapper .controls .button_4 {
+  background-color: rgb(51, 98, 140);
+}
