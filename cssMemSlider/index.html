@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cssMemSlider</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">CSS Mem Slider</h1>
+  </header>
+  <main class="main">    
+    <input class="input" type="radio" name="slides" id="point1" checked>
+    <input class="input" type="radio" name="slides" id="point2">
+    <input class="input" type="radio" name="slides" id="point3">
+    <input class="input" type="radio" name="slides" id="point4">
+    <div class="slider">
+      <img class="slider__image slider__image-current" src="assets/mems/mems1.jpg" alt="mem1">
+      <img class="slider__image" src="assets/mems/mems2.jpg" alt="mem2">
+      <img class="slider__image" src="assets/mems/mems3.jpg" alt="mem3">
+      <img class="slider__image" src="assets/mems/mems4.jpg" alt="mem4">
+    </div>
+    <div class="wrapper">
+      <div class="descriptions">
+        <div class="descriptions__wrapper">
+          <p class="description description_1">Sam Dekker</p>
+          <p class="description description_2">LeBron James</p>
+          <p class="description description_3">Tim Dunkan</p>
+          <p class="description description_4">Amir Johnson</p>
+        </div> 
+      </div>
+      <div class="controls">
+        <label class="button button_1" for="point1"><span class="point point_1"></span></label>
+        <label class="button button_2" for="point2"><span class="point point_2"></span></label>
+        <label class="button button_3" for="point3"><span class="point point_3"></span></label>
+        <label class="button button_4" for="point4"><span class="point point_4"></span></label>
+      </div>   
+    </div>
+  </main>
+</body>
+</html>

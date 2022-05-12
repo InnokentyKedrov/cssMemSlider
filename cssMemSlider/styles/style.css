@@ -1,0 +1,204 @@
+body {
+  background-image: url(../assets/mems/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  margin: 2rem auto;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.main {
+  max-width: 80rem;
+	margin: 0 auto;
+  overflow-x: hidden;
+  background-color: darkgray;
+  border-radius: 1rem;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.slider__image {
+  width: 25%;
+  padding: 3rem;
+  transition: all .6s ease;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.descriptions {
+  max-width: 25%;
+  overflow-x: hidden;
+}
+
+.descriptions__wrapper {
+  display: flex;
+  width: 400%;
+}
+
+.description {
+  width: 25%;
+  padding-left: 4rem;
+  transition: all 1.6s ease;
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.controls {
+  display: flex;
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
+.button {
+  box-sizing: border-box;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.point {
+  display: block;
+  margin: 0.75rem auto;
+  box-sizing: border-box;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  border: 0.05em solid rgb(51, 98, 140);
+  border-radius: 50%;
+  transition: all .6s ease;
+}
+
+.button:hover .point {
+  transform: scale(1.2);
+  box-shadow: 0 0 1rem rgb(51, 98, 140);
+}
+
+.button:active .point_1 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point1:checked ~ .slider .slider__image-current {
+  margin-left: 0;
+}
+
+#point1:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: 0;
+}
+
+#point1:checked ~ .wrapper .controls .button_1 .point_1 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point2:checked ~ .slider .slider__image-current {
+  margin-left: -25%;
+}
+
+#point2:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -25%;
+}
+
+#point2:checked ~ .wrapper .controls .button_2 .point_2 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point3:checked ~ .slider .slider__image-current {
+  margin-left: -50%;
+}
+
+#point3:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -50%;
+}
+
+#point3:checked ~ .wrapper .controls .button_3 .point_3 {
+  background-color: rgb(51, 98, 140);
+}
+
+#point4:checked ~ .slider .slider__image-current {
+  margin-left: -75%;
+}
+
+#point4:checked ~ .wrapper .descriptions .descriptions__wrapper .description_1 {
+  margin-left: -75%;
+}
+
+#point4:checked ~ .wrapper .controls .button_4 .point_4 {
+  background-color: rgb(51, 98, 140);
+}
+
+@media (max-width: 1279px) {
+  .main {
+    width: 90%;
+  }
+
+  .descriptions {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 819px) {
+  .header {
+    margin: 1rem auto;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .slider__image {
+    padding: 2rem;
+  }
+  
+  .wrapper {
+    flex-direction: column;
+  }
+  
+  .descriptions {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .controls {
+    margin: 0;
+    align-self: center;
+  }
+
+  .button {
+    height: 2rem;
+    width: 2rem;
+    margin: 0.3rem;
+  }
+
+  .point {
+    margin: 0.5rem auto;
+    box-sizing: border-box;
+    height: 1rem;
+    width: 1rem;
+  }
+}
